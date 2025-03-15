@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# UniChain: Decentralized Academic Credential Verification 🎓🔗
 
-## Getting Started
+UniChain is a **decentralized, blockchain-based platform** built on **StarkNet** that revolutionizes the way academic credentials are issued, stored, and verified. By leveraging **Zero-Knowledge Proofs (ZKPs)** and **tamper-proof blockchain technology**, UniChain eliminates academic fraud, ensures privacy, and provides instant verification for employers and institutions.  
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🌟 Why UniChain?  
+Academic credential fraud is a growing problem, and traditional verification methods are slow, costly, and prone to errors. UniChain solves this by:  
+- **Eliminating fraud** with blockchain-backed, tamper-proof degrees.  
+- **Protecting privacy** using hashed identifiers and ZKPs.  
+- **Enabling instant verification** for employers and institutions.  
+- **Seamlessly integrating** with HR platforms, job portals, and university systems via APIs.  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🛠️ How It Works  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 1. Degree Issuance by Universities  
+   - Universities issue degrees through UniChain’s platform.  
+   - Each degree is **digitally signed** and stored on the blockchain.  
+   - Universities prove domain ownership using **ENS/DNS verification** to ensure authenticity.  
 
-## Learn More
+### 2. Secure Storage  
+   - Degree metadata is stored on **StarkNet** for immutability.  
+   - Large files (e.g., PDFs) are stored off-chain using **IPFS/Arweave**, linked to on-chain hashes.  
 
-To learn more about Next.js, take a look at the following resources:
+### 3. Privacy-Preserving Verification  
+   - Employers and institutions can verify degrees in **real-time** without accessing sensitive student data.  
+   - **Zero-Knowledge Proofs (ZKPs)** ensure privacy by allowing verification without exposing personal information.  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 4. Seamless Integration  
+   - UniChain provides **APIs** for easy integration with HR platforms, job portals, and university systems.  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🚀 Key Features  
+- **Decentralized Verification:** Built on StarkNet for secure, scalable, and low-cost transactions.  
+- **Tamper-Proof Degrees:** Blockchain-backed credentials that cannot be forged.  
+- **Instant Verification:** Real-time credential checks for employers and institutions.  
+- **Privacy Protection:** Hashed identifiers and ZKPs ensure student data remains private.  
+- **API Integration:** Easy integration with existing systems for universities and employers.  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🧩 Tech Stack  
+- **Blockchain Layer:** StarkNet (Cairo for smart contracts).  
+- **Storage:** IPFS/Arweave for off-chain data.  
+- **Privacy:** Zero-Knowledge Proofs (ZKPs).  
+- **Frontend:** React.js for user-friendly interfaces.  
+- **APIs:** REST/GraphQL for seamless integration.  
+
+---
