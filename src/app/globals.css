@@ -5,3 +5,10 @@ body {
   background: #000000;
   font-family: var(--font-bricolage-grotesque);
 }
+
+
+
+
+input, button, select {
+  outline: none;
+}
