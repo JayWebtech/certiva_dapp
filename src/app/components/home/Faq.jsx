@@ -48,7 +48,7 @@ export default function Faq() {
         {faqData.map(({ question, answer }, index) => (
           <div
             key={index}
-            className="border border-[#393131] px-6 py-4 rounded-[30px]"
+            className="border border-stroke px-6 py-4 rounded-[30px]"
           >
             <div className="flex justify-between items-center gap-2">
               <h4 className="text-primary sm:text-[20px] md:text-[24px]">
@@ -67,7 +67,7 @@ export default function Faq() {
               </div>
             </div>
             {openIndex === index && (
-              <p className="text-white sm:text-[16px] md:text-[20px] w-full md:w-[90%] mt-2">
+              <p className="text-white sm:text-[16px] md:text-[20px] sm:w-full md:w-[90%] mt-2">
                 {answer}
               </p>
             )}

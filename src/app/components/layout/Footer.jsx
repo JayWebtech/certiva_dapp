@@ -15,10 +15,10 @@ export default function Footer() {
         <img src="img/Logo.png" />
       </div>
       <span className="font-[26px]">
-        <p className="text-[#ffffff]">
+        <p className="text-white">
           Temper-proof, Blockchain-Backed Degrees
         </p>
-        <p className="text-[#ffffff]">Verified in Real Time</p>
+        <p className="text-white">Verified in Real Time</p>
       </span>
       <div className="flex gap-4">
         {socials.map((social, index) => (
