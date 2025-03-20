@@ -11,8 +11,9 @@ const Button = ({
   style = {},
   ...otherProps
 }) => {
-  const baseStyles = "w-full font-medium flex items-center justify-center gap-2 rounded-[12px] transition-all duration-300";
-  
+  const baseStyles =
+    "w-full font-medium flex items-center justify-center gap-2 rounded-[12px] transition-all duration-300";
+
   const variantStyles = {
     primary: "bg-primary text-black",
     secondary: "bg-secondary text-white",
