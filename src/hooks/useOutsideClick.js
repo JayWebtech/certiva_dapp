@@ -3,7 +3,7 @@ import { useEffect } from "react";
 const useOutsideClick = (refs, callback) => {
   const handleClickOutside = (event) => {
     const isOutsideAllRefs = refs.every(
-      (ref) => ref.current && !ref.current.contains(event.target)
+      (ref) => ref.current && !ref.current.contains(event.target),
     );
     if (isOutsideAllRefs) {
       callback();
