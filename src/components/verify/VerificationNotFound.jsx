@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Button } from "../form";
 
-export default function VerificationFailed() {
+export default function VerificationNotFound() {
   let code = "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa";
 
   return (
@@ -15,20 +15,19 @@ export default function VerificationFailed() {
 
       <section className="flex flex-col gap-8 border border-neutral-700 rounded-3xl px-3 md:px-16 py-12">
         <h1 className="text-3xl lg:text-6xl text-primary">
-          <span>🚨</span>
-          Degree Marked as Revoked or Suspended
+          <span>⚠️</span>
+          Degree not Found
         </h1>
 
         <span>
           <p className="text-primary">Message:</p>
           <p className="text-lg lg:text-3xl">
-            This degree has been revoked by the issuing university. Verification
-            failed.
+            No record found for this Degree ID. Please check the details and try again.
           </p>
         </span>
         <span>
-          <p className="text-primary">Reason for Revocation:</p>
-          <p className="text-lg lg:text-3xl">Fraudulent credential detected</p>
+          <p className="text-primary">CTA: </p>
+          <p className="text-lg lg:text-3xl">Contact University for Clarification</p>
         </span>
       </section>
 
