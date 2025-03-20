@@ -1,5 +1,5 @@
-import Faq from "./components/home/Faq";
-import Footer from "./components/layout/Footer";
+import Faq from "../components/home/Faq";
+import Footer from "../components/layout/Footer";
 
 export default function Home() {
   return (
