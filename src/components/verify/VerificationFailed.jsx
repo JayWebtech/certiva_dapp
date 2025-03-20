@@ -1,17 +1,15 @@
 import Image from "next/image";
 import { Button } from "../form";
 
-
 export default function VerificationFailed() {
-  let code = "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa"
+  let code = "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa";
 
   return (
     <div className="flex flex-col gap-8">
       <header>
-        <Image src="/logo.svg" alt="Unichain Logo" width={215} height={60} />
+        <Image width={100} height={60} src="/img/logo.svg" alt="" />
         <p className="text-lg lg:text-3xl text-white">
-          Verification details for {" "}
-          <span className="text-primary">{code}</span>
+          Verification details for <span className="text-primary">{code}</span>
         </p>
       </header>
 
@@ -23,7 +21,10 @@ export default function VerificationFailed() {
 
         <span>
           <p className="text-primary">Message:</p>
-          <p className="text-lg lg:text-3xl">This degree has been revoked by the issuing university. Verification failed.</p>
+          <p className="text-lg lg:text-3xl">
+            This degree has been revoked by the issuing university. Verification
+            failed.
+          </p>
         </span>
         <span>
           <p className="text-primary">Reason for Revocation:</p>
@@ -32,11 +33,7 @@ export default function VerificationFailed() {
       </section>
 
       <div className="w-full md:max-w-5xl mx-auto flex flex-col md:flex-row gap-2 lg:gap-8">
-        <Button
-          variant="primary"
-          title="Download Report"
-          size="lg"
-          />
+        <Button variant="primary" title="Download Report" size="lg" />
         <Button
           variant="secondary"
           title="View on explorer"
@@ -44,7 +41,6 @@ export default function VerificationFailed() {
           size="lg"
         />
       </div>
-
     </div>
-  )
+  );
 }
