@@ -11,7 +11,9 @@ export default {
         colors: {
           primary: "#A3FF50",
           secondary: "#000000",
-          stroke: "#444645"
+          stroke: "#444645",
+          white: "#ffffff",
+          error: "#FF0000",
         },
         fontFamily: {
           'sora': ['var(--font-sora)', 'sans-serif'],
