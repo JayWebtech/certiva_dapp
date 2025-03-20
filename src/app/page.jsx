@@ -1,9 +1,11 @@
-"use client";
+import Faq from "../components/home/Faq";
+import Footer from "../components/layout/Footer";
 
 export default function Home() {
   return (
     <div>
-      <h1 className="text-white">Home page</h1>
+      <Faq />
+      <Footer />
     </div>
   );
 }
