@@ -27,7 +27,10 @@ const Input = ({
       )}
 
       {buttonText && (
-        <button className="bg-primary py-[8px] px-[12px] rounded-[4px] min-w-[fit-content] text-sm cursor-pointer">
+        <button
+          className="bg-primary py-[8px] px-[12px] rounded-[4px] min-w-[fit-content] text-sm cursor-pointer"
+          onClick={handleButtonClick}
+        >
           <span> {buttonText} </span>
         </button>
       )}
