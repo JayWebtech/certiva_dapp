@@ -22,12 +22,15 @@ export default function VerificationNotFound() {
         <span>
           <p className="text-primary">Message:</p>
           <p className="text-lg lg:text-3xl">
-            No record found for this Degree ID. Please check the details and try again.
+            No record found for this Degree ID. Please check the details and try
+            again.
           </p>
         </span>
         <span>
           <p className="text-primary">CTA: </p>
-          <p className="text-lg lg:text-3xl">Contact University for Clarification</p>
+          <p className="text-lg lg:text-3xl">
+            Contact University for Clarification
+          </p>
         </span>
       </section>
 

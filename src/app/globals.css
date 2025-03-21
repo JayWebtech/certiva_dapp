@@ -26,7 +26,6 @@ input::placeholder {
 }
 
 .hero-section {
-  background: 
-    url('../../public/img/gradient.png') no-repeat bottom center;
-    background-size: cover, cover;
+  background: url("../../public/img/gradient.png") no-repeat bottom center;
+  background-size: cover, cover;
 }

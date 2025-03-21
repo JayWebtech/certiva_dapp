@@ -51,9 +51,7 @@ export default function Faq() {
             className="border border-stroke px-6 py-4 rounded-lg"
           >
             <div className="flex justify-between items-center gap-2">
-              <h4 className="text-primary sm:text-sm md:text-lg">
-                {question}
-              </h4>
+              <h4 className="text-primary sm:text-sm md:text-lg">{question}</h4>
               <div>
                 <IoChevronDownCircleOutline
                   className={`text-primary cursor-pointer transition-transform duration-300 ${
