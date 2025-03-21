@@ -25,16 +25,8 @@ input::placeholder {
   color: #5b5858;
 }
 
-
 .hero-section {
   background: 
     url('../../public/img/gradient.png') no-repeat bottom center;
     background-size: cover, cover;
-}
-
-
-@media screen and (max-width: 768px) {
-  .container {
-    max-width: 100% !important;
-  }
 }

@@ -29,7 +29,7 @@ const Button = ({
 
   return (
     <button
-      className={`${baseStyles} ${variantStyles[variant] || variantStyles.primary} ${sizeStyles[size] || sizeStyles.md} ${className} whitespace-nowrap`}
+      className={`${baseStyles} ${variantStyles[variant] || variantStyles.primary} ${sizeStyles[size] || sizeStyles.md} ${className} whitespace-nowrap cursor-pointer`}
       onClick={handleClick}
       style={style}
       {...otherProps}

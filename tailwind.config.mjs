@@ -18,16 +18,6 @@ export default {
         sora: ["var(--font-sora)", "sans-serif"],
         orbitron: ["var(--font-orbitron)", "sans-serif"],
       },
-
-      screens: {
-        smbelow: { max: "576px" },
-        mdbelow: { max: "768px" },
-        verysm: "300px",
-        sm: "576px",
-        md: "768px",
-        lg: "991px",
-        xl: "1280px",
-      },
     },
   },
   plugins: [],

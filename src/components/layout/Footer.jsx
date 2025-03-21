@@ -10,9 +10,11 @@ const socials = [
 
 export default function Footer() {
   return (
-    <div className="flex flex-col sm:mt-7 md:mt-15 justify-center gap-6 bg-[url('/img/footer-wave.png')] text-primary bg-fit bg-center bg-no-repeat min-h-[500px]">
+    <div className="bg-[url('/img/footer-wave.png')]">
+    <div className="container mx-auto px-4 sm:px-10 md:px-8 lg:px-16 pt-5 ">
+    <div className="flex flex-col sm:mt-7 md:mt-15 justify-center gap-6  text-primary bg-fit bg-center bg-no-repeat min-h-[500px]">
       <div className="logo">
-        <img src="img/Logo.png" />
+        <img src="img/logo.svg" />
       </div>
       <span className="font-[26px]">
         <p className="text-white">
@@ -31,6 +33,8 @@ export default function Footer() {
           </a>
         ))}
       </div>
+    </div>
+    </div>
     </div>
   );
 }

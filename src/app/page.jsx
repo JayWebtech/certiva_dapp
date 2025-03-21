@@ -12,7 +12,9 @@ export default function Home() {
         <Navbar />
         <Hero />
       </div>
-      <Faq />
+      <div className="container mx-auto px-4 sm:px-10 md:px-8 lg:px-16 pt-5">
+        <Faq />
+      </div>
       <Footer />
     </div>
   );
