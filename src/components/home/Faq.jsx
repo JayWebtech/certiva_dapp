@@ -40,20 +40,18 @@ export default function Faq() {
 
   return (
     <div>
-      <h1 className="text-primary sm:text-[42px] md:text-[64px] py-5">
-        Frequently Asked Questions (FAQ)
+      <h1 className="text-primary font-bold sm:text-[42px] md:text-4xl py-5">
+        Frequently Asked Questions
       </h1>
 
       <div className="flex flex-col gap-5">
         {faqData.map(({ question, answer }, index) => (
           <div
             key={index}
-            className="border border-stroke px-6 py-4 rounded-[30px]"
+            className="border border-stroke px-6 py-4 rounded-lg"
           >
             <div className="flex justify-between items-center gap-2">
-              <h4 className="text-primary sm:text-[20px] md:text-[24px]">
-                {question}
-              </h4>
+              <h4 className="text-primary sm:text-sm md:text-lg">{question}</h4>
               <div>
                 <IoChevronDownCircleOutline
                   className={`text-primary cursor-pointer transition-transform duration-300 ${
@@ -67,7 +65,7 @@ export default function Faq() {
               </div>
             </div>
             {openIndex === index && (
-              <p className="text-white sm:text-[16px] md:text-[20px] sm:w-full md:w-[90%] mt-2">
+              <p className="text-white sm:text-sm md:text-lg sm:w-full md:w-[90%] mt-2">
                 {answer}
               </p>
             )}

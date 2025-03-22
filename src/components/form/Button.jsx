@@ -17,7 +17,8 @@ const Button = ({
   const variantStyles = {
     primary: "bg-primary text-black",
     secondary: "bg-secondary text-white",
-    error: "bg-error text-white hover:bg-red-600",
+    error: "bg-error text-white",
+    white: "bg-white text-black",
   };
 
   const sizeStyles = {
@@ -28,7 +29,7 @@ const Button = ({
 
   return (
     <button
-      className={`${baseStyles} ${variantStyles[variant] || variantStyles.primary} ${sizeStyles[size] || sizeStyles.md} ${className}`}
+      className={`${baseStyles} ${variantStyles[variant] || variantStyles.primary} ${sizeStyles[size] || sizeStyles.md} ${className} whitespace-nowrap cursor-pointer`}
       onClick={handleClick}
       style={style}
       {...otherProps}
