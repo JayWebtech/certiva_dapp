@@ -10,7 +10,7 @@ export default function UniversityDetails({ changeStep }) {
   const countries = ["Nigeria", "USA", "UK", "Canada"];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-20 rounded-3xl overflow-hidden">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 rounded-3xl overflow-hidden">
       <div className="w-full p-2">
         <div className="mb-8">
           <Logo />

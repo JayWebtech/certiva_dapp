@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 
 const AuthSideBar = ({
   title = "University Details",
@@ -11,7 +10,7 @@ const AuthSideBar = ({
 }) => {
   return (
     <div
-      className={`auth-sidebar h-full w-full flex flex-col items-center py-20 justify-center relative border-2 border-stroke rounded-[30px] ${className}`}
+      className={`auth-sidebar hidden lg:flex h-full w-full flex-col items-center py-20 justify-center relative border-2 border-stroke rounded-[30px] ${className}`}
     >
       <div className="flex flex-col items-center justify-center gap-10">
         <img src="/img/cube.svg" alt="" className="w-[20em]" />

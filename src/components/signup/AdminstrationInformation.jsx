@@ -1,13 +1,12 @@
 import { Button } from "../form";
 import Input from "../form/Input";
 import AuthSideBar from "../layout/AuthSideBar";
-import { useFormik, Formik, Form } from "formik";
-import { adminstrationInformationSchema } from "@/schema";
+import { Formik, Form } from "formik";
 import Logo from "../layout/Logo";
 
 export default function AdminstrationInformation({ changeStep }) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-20 rounded-3xl overflow-hidden">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 rounded-3xl overflow-hidden">
       <div className="w-full p-2">
         <div className="mb-8">
           <Logo />

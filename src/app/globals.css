@@ -29,6 +29,7 @@ input::placeholder {
   background: url("../../public/img/gradient.png") no-repeat bottom center;
   background-size: cover, cover;
 }
+
 .auth-sidebar {
   background:
     url("../../public/img/grid1.svg") no-repeat top center,
