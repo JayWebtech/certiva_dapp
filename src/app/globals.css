@@ -29,3 +29,9 @@ input::placeholder {
   background: url("../../public/img/gradient.png") no-repeat bottom center;
   background-size: cover, cover;
 }
+.hero-section2{
+  background: 
+    url('../../public/img/grid1.svg') no-repeat top center,
+    url('../../public/img/grid2.svg') no-repeat bottom center;
+    background-size: contain, cover;
+}
