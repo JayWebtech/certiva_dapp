@@ -34,7 +34,7 @@ export default function AdminstrationInformation() {
     },
     validationSchema: adminstrationInformationSchema,
     onSubmit: (values) => {
-      console.log(values);
+      //   console.log(values);
       // Handle form submission here
     },
   });
