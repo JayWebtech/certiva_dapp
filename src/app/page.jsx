@@ -10,7 +10,7 @@ import Hero from "@/components/home/Hero";
 
 export default function Home() {
   return (
-    <div
+    <div>
       <div className="hero-section h-screen w-full">
         <Navbar />
         <Hero />

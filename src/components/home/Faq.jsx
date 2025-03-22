@@ -40,11 +40,11 @@ export default function Faq() {
 
   return (
     <div>
-      <h1 className="text-primary font-bold sm:text-[42px] md:text-4xl py-5">
+      <h1 className="text-primary font-bold text-3xl lg:text-5xl">
         Frequently Asked Questions
       </h1>
 
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col mt-8 gap-5">
         {faqData.map(({ question, answer }, index) => (
           <div
             key={index}

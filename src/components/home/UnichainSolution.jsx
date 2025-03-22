@@ -1,4 +1,3 @@
-
 const Step = ({ stepNumber, primaryText, secondaryText, isLastStep }) => {
   return (
     <>
@@ -17,11 +16,12 @@ const Step = ({ stepNumber, primaryText, secondaryText, isLastStep }) => {
     </>
   );
 };
+
 function SolutionTimeline() {
   return (
-    <div className="flex flex-col items-start  p-6 bg-black text-white">
+    <div className="flex flex-col items-start py-6 text-white">
       {/* Step 1 */}
-    
+
       <Step
         stepNumber={1}
         primaryText={"Universities Register & Issue Degrees"}
@@ -47,13 +47,12 @@ function SolutionTimeline() {
 
 export default function UnichainSolution() {
   return (
-    <div className="text-white py-20 flex flex-col lg:flex-row lg:items-center">
+    <div className="text-white py-5 lg:py-20 flex flex-col lg:flex-row lg:items-center">
       <div className="md:basis-1/2 grow">
-        {/* text area */}
-        <h4 className="text-primary text-5xl font-bold">
+        <h4 className="text-primary text-3xl lg:text-5xl font-bold">
           The Unichain Solution
         </h4>
-        <p className="text-2xl mt-2">
+        <p className="text-xl mt-2">
           Seamless, Secure, and Instant Verification
         </p>
 
