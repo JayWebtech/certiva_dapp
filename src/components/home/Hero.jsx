@@ -1,7 +1,9 @@
 import React from "react";
 import { Button } from "../form";
+import { useRouter } from "next/navigation";
 
 const Hero = () => {
+  const router = useRouter();
   return (
     <div className="text-white">
       <div className="mx-auto px-4 sm:px-10 md:px-8 lg:px-16">
@@ -24,6 +26,7 @@ const Hero = () => {
                   title="For universities"
                   variant="primary"
                   className="rounded-[100px] py-[16px]"
+                  onClick={() => router.push("/signup")}
                 />
 
                 <Button

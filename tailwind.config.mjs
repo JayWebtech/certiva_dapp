@@ -13,6 +13,7 @@ export default {
         stroke: "#444645",
         white: "#ffffff",
         error: "#FF0000",
+        dim: "#5B5858",
       },
       fontFamily: {
         sora: ["var(--font-sora)", "sans-serif"],

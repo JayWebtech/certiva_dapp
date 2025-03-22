@@ -2,6 +2,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { IoIosMenu } from "react-icons/io";
 import { MdClose } from "react-icons/md";
+import Logo from "./Logo";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -10,13 +11,7 @@ const Navbar = () => {
     <nav className="navbar text-white container mx-auto px-4 sm:px-10 md:px-8 lg:px-16 pt-5">
       <div className="w-full flex items-center justify-between border border-stroke py-[12px] px-[16px] rounded-[20px]">
         <div className="nav-logo">
-          <Link href="/">
-            <img
-              src="/img/logo.svg"
-              alt="Unichain"
-              className="object-cover h-[36px]"
-            />
-          </Link>
+          <Logo />
         </div>
 
         <ul className="hidden lg:flex items-center justify-center gap-8">
