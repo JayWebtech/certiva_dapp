@@ -5,20 +5,31 @@ import { CustomSelect } from "../form";
 import AuthSideBar from "../layout/AuthSideBar";
 import { Formik, Form } from "formik";
 import Logo from "../layout/Logo";
+import { motion } from "framer-motion";
 
 export default function UniversityDetails({ changeStep }) {
   const countries = ["Nigeria", "USA", "UK", "Canada"];
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 rounded-3xl overflow-hidden">
-      <div className="w-full p-2">
-        <div className="mb-8">
+      <motion.div 
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
+        className="w-full p-2"
+      >
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+          className="mb-8"
+        >
           <Logo />
           <p className="text-dim">
             Register your university to start issuing verifiable, fraud-proof
             academic credentials.
           </p>
-        </div>
+        </motion.div>
         <Formik
           initialValues={{
             country: "",
@@ -28,7 +39,11 @@ export default function UniversityDetails({ changeStep }) {
           }}
         >
           <Form className="space-y-4">
-            <div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+            >
               <label
                 htmlFor="university-name"
                 className="block mb-2 text-white"
@@ -36,9 +51,13 @@ export default function UniversityDetails({ changeStep }) {
                 University name
               </label>
               <Input id="university-name" placeholder="e.g Harvard" />
-            </div>
+            </motion.div>
 
-            <div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.5 }}
+            >
               <label
                 htmlFor="official-domain"
                 className="block mb-2 text-white"
@@ -46,16 +65,25 @@ export default function UniversityDetails({ changeStep }) {
                 Official Domain
               </label>
               <Input id="official-domain" placeholder="e.g www.harvard.edu" />
-            </div>
+            </motion.div>
 
-            <div className="relative">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+              className="relative"
+            >
               <label htmlFor="country" className="block mb-2 text-white">
                 Country
               </label>
               <CustomSelect name="country" options={countries} />
-            </div>
+            </motion.div>
 
-            <div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.5 }}
+            >
               <label htmlFor="accreditation" className="block mb-2 text-white">
                 Accreditation Body (Optional)
               </label>
@@ -63,25 +91,36 @@ export default function UniversityDetails({ changeStep }) {
                 id="accreditation"
                 placeholder="e.g U.S. Department of Education"
               />
-            </div>
+            </motion.div>
 
-            <Button
-              className="mt-8"
-              title="Next step"
-              handleClick={changeStep}
-            />
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7, duration: 0.5 }}
+            >
+              <Button
+                className="mt-8"
+                title="Next step"
+                handleClick={changeStep}
+              />
+            </motion.div>
           </Form>
         </Formik>
-      </div>
+      </motion.div>
 
-      <div className="w-full">
+      <motion.div 
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
+        className="w-full"
+      >
         <AuthSideBar
           title="University Details"
           currentStep={1}
           totalSteps={4}
           showIndicators={true}
         />
-      </div>
+      </motion.div>
     </div>
   );
 }
