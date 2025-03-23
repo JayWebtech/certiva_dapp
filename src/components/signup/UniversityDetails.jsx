@@ -78,7 +78,7 @@ export default function UniversityDetails({ changeStep }) {
         <AuthSideBar
           title="University Details"
           currentStep={1}
-          totalSteps={3}
+          totalSteps={4}
           showIndicators={true}
         />
       </div>
