@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 class AcademicCard {
   constructor(title, content) {
     this.title = title;
@@ -22,31 +24,90 @@ const CARDS = [
     "Fraudulent credentials lead to unqualified hires, financial losses, and compliance risks.",
   ),
 ];
+
 export default function AcademicFraudSection() {
   return (
-    <div className="text-white py-5 lg:py-20">
-      <h2 className="text-3xl lg:text-3xl font-bold">
-        <span className="text-primary">Academic Fraud</span>
+    <motion.div 
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+      className="text-white py-5 lg:py-20"
+    >
+      <motion.h2 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.2, duration: 0.5 }}
+        className="text-3xl lg:text-3xl font-bold"
+      >
+        <motion.span 
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3, duration: 0.5 }}
+          className="text-primary"
+        >
+          Academic Fraud
+        </motion.span>
         <span> is a</span>
-      </h2>
-      <h1 className="text-3xl lg:text-5xl font-bold">
-        <span className="text-primary">$1 Billion+</span>
+      </motion.h2>
+      <motion.h1 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.4, duration: 0.5 }}
+        className="text-3xl lg:text-5xl font-bold"
+      >
+        <motion.span 
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          className="text-primary"
+        >
+          $1 Billion+
+        </motion.span>
         <span> Problem</span>
-      </h1>
+      </motion.h1>
 
-      <div className="flex flex-col gap-4 md:gap-6 md:grid grid-cols-2 grid-rows-2 mt-10 grid-flow-row-dense">
-        {/* cards container  */}
-
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.6, duration: 0.5 }}
+        className="flex flex-col gap-4 md:gap-6 md:grid grid-cols-2 grid-rows-2 mt-10 grid-flow-row-dense"
+      >
         {CARDS.map((c, index) => (
-          <div
+          <motion.div
             key={c.title + index.toString()}
-            className="py-6 px-6 border-[1px] border-stroke rounded-2xl"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.7 + index * 0.1, duration: 0.5 }}
+            className="py-6 px-6 border-[1px] border-stroke rounded-2xl hover:border-primary transition-colors duration-300"
           >
-            <div className=" text-xl text-primary font-bold"> {c.title}</div>
-            <div className="mt-4 md:text-lg">{c.content} </div>
-          </div>
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.8 + index * 0.1, duration: 0.5 }}
+              className="text-xl text-primary font-bold"
+            >
+              {c.title}
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.9 + index * 0.1, duration: 0.5 }}
+              className="mt-4 md:text-lg"
+            >
+              {c.content}
+            </motion.div>
+          </motion.div>
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }

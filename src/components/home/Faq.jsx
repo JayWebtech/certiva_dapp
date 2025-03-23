@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { IoChevronDownCircleOutline } from "react-icons/io5";
+import { motion, AnimatePresence } from "framer-motion";
 
 const faqData = [
   {
@@ -16,7 +17,7 @@ const faqData = [
   {
     question: "How can employers verify a degree?",
     answer:
-      "Employers can instantly verify degrees through UniChain’s platform or API integration, reducing hiring risks and manual verification delays.",
+      "Employers can instantly verify degrees through UniChain's platform or API integration, reducing hiring risks and manual verification delays.",
   },
   {
     question: "Is student data kept private?",
@@ -39,39 +40,75 @@ export default function Faq() {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <div>
-      <h1 className="text-primary font-bold text-3xl lg:text-5xl">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    >
+      <motion.h1 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.2, duration: 0.5 }}
+        className="text-primary font-bold text-3xl lg:text-5xl"
+      >
         Frequently Asked Questions
-      </h1>
+      </motion.h1>
 
-      <div className="flex flex-col mt-8 gap-5">
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.3, duration: 0.5 }}
+        className="flex flex-col mt-8 gap-5"
+      >
         {faqData.map(({ question, answer }, index) => (
-          <div
+          <motion.div
             key={index}
-            className="border border-stroke px-6 py-4 rounded-lg"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4 + index * 0.1, duration: 0.5 }}
+            className="border border-stroke px-6 py-4 rounded-lg hover:border-primary transition-colors duration-300"
           >
-            <div className="flex justify-between items-center gap-2">
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5 + index * 0.1, duration: 0.5 }}
+              className="flex justify-between items-center gap-2"
+            >
               <h4 className="text-primary sm:text-sm md:text-lg">{question}</h4>
-              <div>
+              <motion.div
+                animate={{ rotate: openIndex === index ? 180 : 0 }}
+                transition={{ duration: 0.3 }}
+              >
                 <IoChevronDownCircleOutline
-                  className={`text-primary cursor-pointer transition-transform duration-300 ${
-                    openIndex === index ? "rotate-180" : ""
-                  }`}
+                  className="text-primary cursor-pointer"
                   size={30}
                   onClick={() =>
                     setOpenIndex(openIndex === index ? null : index)
                   }
                 />
-              </div>
-            </div>
-            {openIndex === index && (
-              <p className="text-white sm:text-sm md:text-lg sm:w-full md:w-[90%] mt-2">
-                {answer}
-              </p>
-            )}
-          </div>
+              </motion.div>
+            </motion.div>
+            <AnimatePresence>
+              {openIndex === index && (
+                <motion.p
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="text-white sm:text-sm md:text-lg sm:w-full md:w-[90%] mt-2 overflow-hidden"
+                >
+                  {answer}
+                </motion.p>
+              )}
+            </AnimatePresence>
+          </motion.div>
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
