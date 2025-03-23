@@ -86,7 +86,7 @@ export default function AdminstrationInformation({ changeStep }) {
         <AuthSideBar
           title="Administrator Details"
           currentStep={2}
-          totalSteps={3}
+          totalSteps={4}
           showIndicators={true}
         />
       </div>
