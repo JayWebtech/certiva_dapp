@@ -1,6 +1,12 @@
 import { motion } from "framer-motion";
 
-const Step = ({ stepNumber, primaryText, secondaryText, isLastStep, index }) => {
+const Step = ({
+  stepNumber,
+  primaryText,
+  secondaryText,
+  isLastStep,
+  index,
+}) => {
   return (
     <motion.div
       initial={{ opacity: 0, x: -50 }}
@@ -10,7 +16,7 @@ const Step = ({ stepNumber, primaryText, secondaryText, isLastStep, index }) => 
     >
       <div className="flex items-start gap-x-4">
         <div className="flex flex-col items-center">
-          <motion.div 
+          <motion.div
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
@@ -20,7 +26,7 @@ const Step = ({ stepNumber, primaryText, secondaryText, isLastStep, index }) => 
             {stepNumber}
           </motion.div>
           {isLastStep ? null : (
-            <motion.div 
+            <motion.div
               initial={{ height: 0 }}
               whileInView={{ height: "4rem" }}
               viewport={{ once: true }}
@@ -29,7 +35,7 @@ const Step = ({ stepNumber, primaryText, secondaryText, isLastStep, index }) => 
             />
           )}
         </div>
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -72,21 +78,21 @@ function SolutionTimeline() {
 
 export default function UnichainSolution() {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
       className="text-white py-5 lg:py-20 flex flex-col lg:flex-row lg:items-center"
     >
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
         className="md:basis-1/2 grow"
       >
-        <motion.h4 
+        <motion.h4
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -95,7 +101,7 @@ export default function UnichainSolution() {
         >
           The Unichain Solution
         </motion.h4>
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -109,44 +115,44 @@ export default function UnichainSolution() {
           <SolutionTimeline />
         </div>
       </motion.div>
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, x: 50 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
         className="basis-1/2 items-center justify-center flex lg:flex"
       >
-        <motion.img 
+        <motion.img
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          animate={{ 
+          animate={{
             y: [0, -20, 0],
             rotate: [0, 360],
-            scale: [1, 1.05, 1]
+            scale: [1, 1.05, 1],
           }}
-          transition={{ 
+          transition={{
             duration: 8,
             repeat: Infinity,
             ease: "easeInOut",
             y: {
               duration: 4,
               repeat: Infinity,
-              ease: "easeInOut"
+              ease: "easeInOut",
             },
             rotate: {
               duration: 20,
               repeat: Infinity,
-              ease: "linear"
+              ease: "linear",
             },
             scale: {
               duration: 4,
               repeat: Infinity,
-              ease: "easeInOut"
-            }
+              ease: "easeInOut",
+            },
           }}
-          src={"/img/globe.png"} 
-          className="w-[50%] lg:w-[80%] h-auto" 
+          src={"/img/globe.png"}
+          className="w-[50%] lg:w-[80%] h-auto"
         />
       </motion.div>
     </motion.div>
