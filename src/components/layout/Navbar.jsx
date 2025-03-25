@@ -9,13 +9,13 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <motion.nav 
+    <motion.nav
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       className="navbar text-white container mx-auto px-4 sm:px-10 md:px-8 lg:px-16 pt-5"
     >
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
@@ -25,7 +25,7 @@ const Navbar = () => {
           <Logo />
         </div>
 
-        <motion.ul 
+        <motion.ul
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.5 }}
@@ -37,7 +37,7 @@ const Navbar = () => {
           <Navlink url="/" title="Our solutions" />
         </motion.ul>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.4, duration: 0.5 }}
@@ -46,7 +46,7 @@ const Navbar = () => {
           <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href="/"
+            href="/login"
             className="bg-primary text-black py-[8px] px-[24px] rounded-[8px] text-sm"
           >
             Sign in
@@ -62,7 +62,7 @@ const Navbar = () => {
         </motion.div>
 
         <div className="lg:hidden">
-          <motion.div 
+          <motion.div
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             className="cursor-pointer"
@@ -91,7 +91,7 @@ const Navbar = () => {
             transition={{ duration: 0.3 }}
             className="border border-stroke py-[12px] px-[16px] rounded-[20px] lg:hidden mt-[12px] overflow-hidden"
           >
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.3 }}
@@ -132,7 +132,7 @@ const Navbar = () => {
 
 const Navlink = ({ url, title }) => {
   return (
-    <motion.li 
+    <motion.li
       whileHover={{ x: 5 }}
       className="text-sm hover:text-primary transition-colors duration-300"
     >

@@ -17,16 +17,16 @@ const AuthSideBar = ({
       className={`auth-sidebar hidden lg:flex h-full w-full flex-col items-center py-20 justify-center relative border-2 border-stroke rounded-[30px] ${className}`}
     >
       <div className="flex flex-col items-center justify-center gap-10">
-        <motion.img 
+        <motion.img
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }}
-          src="/img/cube.svg" 
-          alt="" 
-          className="w-[20em]" 
+          src="/img/cube.svg"
+          alt=""
+          className="w-[20em]"
         />
 
-        <motion.h2 
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.5 }}
@@ -35,7 +35,7 @@ const AuthSideBar = ({
           {title}
         </motion.h2>
         {showIndicators && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.5 }}

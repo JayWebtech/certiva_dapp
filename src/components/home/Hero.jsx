@@ -9,13 +9,13 @@ const Hero = () => {
     <div className="text-white">
       <div className="mx-auto px-4 sm:px-10 md:px-8 lg:px-16">
         <div className="flex items-center justify-center mt-[5em]">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="hero-content text-center py-[64px]"
           >
-            <motion.h1 
+            <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
@@ -23,7 +23,7 @@ const Hero = () => {
             >
               {" "}
               Revolutionizing<br></br>{" "}
-              <motion.span 
+              <motion.span
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4, duration: 0.5 }}
@@ -40,7 +40,7 @@ const Hero = () => {
                 with Blockchain Technology.
               </motion.span>{" "}
             </motion.h1>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.5 }}
@@ -50,7 +50,7 @@ const Hero = () => {
               Unichain ensures instant, secure academic credential verification
               using Starknet and Zero-Knowledge Proofs.{" "}
             </motion.p>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1, duration: 0.5 }}

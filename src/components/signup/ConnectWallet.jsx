@@ -1,9 +1,9 @@
-import React from 'react'
-import Logo from '../layout/Logo'
-import { Button } from '../form'
-import AuthSideBar from '../layout/AuthSideBar'
+import React from "react";
+import Logo from "../layout/Logo";
+import { Button } from "../form";
+import AuthSideBar from "../layout/AuthSideBar";
 
-const ConnectWallet = ({changeStep}) => {
+const ConnectWallet = ({ changeStep }) => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 rounded-3xl overflow-hidden">
       <div className="w-full p-2">
@@ -13,13 +13,16 @@ const ConnectWallet = ({changeStep}) => {
             Register your university to start issuing verifiable, fraud-proof
             academic credentials.
           </p>
-          <p className='my-4 text-white text-sm'>Verification successful! Please bind your wallet to enable secure login and access your dashboard in the future.</p>
+          <p className="my-4 text-white text-sm">
+            Verification successful! Please bind your wallet to enable secure
+            login and access your dashboard in the future.
+          </p>
         </div>
         <Button
-              className="mt-8"
-              title="Connect wallet"
-              handleClick={changeStep}
-            />
+          className="mt-8"
+          title="Connect wallet"
+          handleClick={changeStep}
+        />
       </div>
 
       <div className="w-full">
@@ -31,7 +34,7 @@ const ConnectWallet = ({changeStep}) => {
         />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ConnectWallet
+export default ConnectWallet;

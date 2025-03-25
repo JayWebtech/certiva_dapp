@@ -31,14 +31,14 @@ const CARDS = [
 
 export default function WhoCanBenefit() {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
       className="text-white py-20"
     >
-      <motion.h4 
+      <motion.h4
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -47,7 +47,7 @@ export default function WhoCanBenefit() {
       >
         Who Can Benefit?{" "}
       </motion.h4>
-      <motion.p 
+      <motion.p
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -56,7 +56,7 @@ export default function WhoCanBenefit() {
       >
         Bringing Trust, Speed, and Security to Academic Credentials{" "}
       </motion.p>
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -72,7 +72,7 @@ export default function WhoCanBenefit() {
             transition={{ delay: 0.5 + index * 0.1, duration: 0.5 }}
             className="py-6 px-6 border-[1px] border-[#393131] rounded-2xl text-white relative hover:border-primary transition-colors duration-300"
           >
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -81,7 +81,7 @@ export default function WhoCanBenefit() {
             >
               {c.title}
             </motion.div>
-            <motion.ul 
+            <motion.ul
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -89,12 +89,15 @@ export default function WhoCanBenefit() {
               className="mt-4 list-disc px-6 leading-loose"
             >
               {c.items.map((item, itemIndex) => (
-                <motion.li 
+                <motion.li
                   key={"a " + itemIndex.toString()}
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: 0.8 + index * 0.1 + itemIndex * 0.1, duration: 0.5 }}
+                  transition={{
+                    delay: 0.8 + index * 0.1 + itemIndex * 0.1,
+                    duration: 0.5,
+                  }}
                 >
                   {item}
                 </motion.li>
