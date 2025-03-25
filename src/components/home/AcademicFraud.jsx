@@ -27,21 +27,21 @@ const CARDS = [
 
 export default function AcademicFraudSection() {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
       className="text-white py-5 lg:py-20"
     >
-      <motion.h2 
+      <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.2, duration: 0.5 }}
         className="text-3xl lg:text-3xl font-bold"
       >
-        <motion.span 
+        <motion.span
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -52,14 +52,14 @@ export default function AcademicFraudSection() {
         </motion.span>
         <span> is a</span>
       </motion.h2>
-      <motion.h1 
+      <motion.h1
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.4, duration: 0.5 }}
         className="text-3xl lg:text-5xl font-bold"
       >
-        <motion.span 
+        <motion.span
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -71,7 +71,7 @@ export default function AcademicFraudSection() {
         <span> Problem</span>
       </motion.h1>
 
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -87,7 +87,7 @@ export default function AcademicFraudSection() {
             transition={{ delay: 0.7 + index * 0.1, duration: 0.5 }}
             className="py-6 px-6 border-[1px] border-stroke rounded-2xl hover:border-primary transition-colors duration-300"
           >
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -96,7 +96,7 @@ export default function AcademicFraudSection() {
             >
               {c.title}
             </motion.div>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

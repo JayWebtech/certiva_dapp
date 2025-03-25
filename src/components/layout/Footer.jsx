@@ -11,7 +11,7 @@ const socials = [
 
 export default function Footer() {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
@@ -19,14 +19,14 @@ export default function Footer() {
       className="bg-[url('/img/footer-wave.png')]"
     >
       <div className="container mx-auto px-4 sm:px-10 md:px-8 lg:px-16 pt-5 ">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="flex flex-col sm:mt-7 md:mt-15 justify-center gap-6  text-primary bg-fit bg-center bg-no-repeat min-h-[500px]"
         >
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -35,14 +35,14 @@ export default function Footer() {
           >
             <img src="img/logo.svg" alt="Logo" />
           </motion.div>
-          <motion.span 
+          <motion.span
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3, duration: 0.5 }}
             className="font-[26px]"
           >
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -51,7 +51,7 @@ export default function Footer() {
             >
               Temper-proof, Blockchain-Backed Degrees
             </motion.p>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -61,7 +61,7 @@ export default function Footer() {
               Verified in Real Time
             </motion.p>
           </motion.span>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -76,10 +76,10 @@ export default function Footer() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.1, rotate: 360 }}
-                transition={{ 
-                  delay: 0.7 + index * 0.1, 
+                transition={{
+                  delay: 0.7 + index * 0.1,
                   duration: 0.5,
-                  rotate: { duration: 0.5 }
+                  rotate: { duration: 0.5 },
                 }}
                 className="bg-primary text-secondary text-4xl h-[70px] w-[70px] rounded-full flex justify-center items-center"
               >
