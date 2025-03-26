@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: (theme) => ({
-        hero: "url('/img/BlackDice.svg')"
+        hero: "url('/img/BlackDice.svg')",
       }),
       colors: {
         primary: "#A3FF50",

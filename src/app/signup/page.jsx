@@ -2,6 +2,7 @@
 import { useState } from "react";
 import UniversityDetails from "@/components/signup/UniversityDetails";
 import AdminstrationInformation from "@/components/signup/AdminstrationInformation";
+import Authentication from "@/components/signup/Authentication";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function SignUp() {
@@ -34,6 +35,17 @@ export default function SignUp() {
             transition={{ duration: 0.3 }}
           >
             <AdminstrationInformation changeStep={changeStep} />
+          </motion.div>
+        )}
+        {step === 3 && (
+          <motion.div
+            key="step3"
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 100 }}
+            transition={{ duration: 0.3 }}
+          >
+            <Authentication changeStep={changeStep} />
           </motion.div>
         )}
       </AnimatePresence>
