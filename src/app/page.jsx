@@ -5,12 +5,15 @@ import Faq from "../components/home/Faq";
 import Footer from "../components/layout/Footer";
 import UnichainSolution from "@/components/home/UnichainSolution";
 import WhoCanBenefit from "@/components/home/WhoCanBenefit";
-
+import NextTopLoader from 'nextjs-toploader';
 import Hero from "@/components/home/Hero";
 
 export default function Home() {
   return (
     <div>
+      <NextTopLoader
+      color= "#A3FF50"
+      speed={500}/>
       <div className="hero-section h-screen w-full">
         <Navbar />
         <Hero />
