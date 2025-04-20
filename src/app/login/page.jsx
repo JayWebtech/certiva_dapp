@@ -4,24 +4,24 @@ import Head from "next/head";
 import Input from "@/components/form/Input";
 import { Button } from "@/components/form";
 import Logo from "@/components/layout/Logo";
+import Navbar from "@/components/layout/Navbar";
+import { useRouter } from "next/navigation";
 
 export default function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  const handleSubmit = (e) => {};
+  const router = useRouter();
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-black text-white">
-      <div className="w-full max-w-2xl p-8 space-y-8">
-        <div className="text-center mb-10">
-          <Logo />
-          <p className="mt-4 text-gray-400">
-            Enter your login credentials to access your dashboard
-          </p>
-        </div>
+    <div>
+      <Navbar />
+      <div className="flex items-center justify-center min-h-screen bg-black text-white">
+        <div className="w-full max-w-2xl p-8 space-y-8">
+          <div className="text-center mb-10">
+            <Logo size="text-4xl" />
+            <p className="mt-4 text-gray-400">
+              Enter your login credentials to access your dashboard
+            </p>
+          </div>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label htmlFor="email" className="block text-sm font-medium mb-2">
               University Email
@@ -38,8 +38,8 @@ export default function Login() {
             </label>
             <Input placeholder={"*********"} type={"password"} />
           </div>
-          <Button title={"Login"} />
-        </form>
+          <Button title={"Login"} handleClick={() => router.push("/otp")} />
+        </div>
       </div>
     </div>
   );

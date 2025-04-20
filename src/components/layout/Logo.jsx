@@ -2,14 +2,14 @@ import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
 
-const Logo = () => {
+const Logo = ({ size = "text-2xl" }) => {
   return (
     <Link href={"/"}>
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="text-2xl font-bold cursor-pointer"
+        className={`${size} font-bold cursor-pointer`}
       >
         <motion.span
           initial={{ opacity: 0, x: -20 }}
@@ -17,7 +17,7 @@ const Logo = () => {
           transition={{ delay: 0.2, duration: 0.5 }}
           className="text-white"
         >
-          uni
+          Cer
         </motion.span>
         <motion.span
           initial={{ opacity: 0, x: 20 }}
@@ -25,7 +25,7 @@ const Logo = () => {
           transition={{ delay: 0.3, duration: 0.5 }}
           className="text-[#A3FF50]"
         >
-          chain
+          tiva
         </motion.span>
       </motion.h2>
     </Link>

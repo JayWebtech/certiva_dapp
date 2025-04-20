@@ -76,7 +76,7 @@ function SolutionTimeline() {
   );
 }
 
-export default function UnichainSolution() {
+export default function CertivaSolution() {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -99,7 +99,7 @@ export default function UnichainSolution() {
           transition={{ delay: 0.2, duration: 0.5 }}
           className="text-primary text-3xl lg:text-5xl font-bold"
         >
-          The Unichain Solution
+          The Certiva Solution
         </motion.h4>
         <motion.p
           initial={{ opacity: 0, y: 20 }}

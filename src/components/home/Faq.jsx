@@ -5,29 +5,28 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const faqData = [
   {
-    question: "What is UniChain?",
+    question: "What is Certiva?",
     answer:
-      "UniChain is a decentralized, blockchain-based degree verification system that allows universities to issue tamper-proof credentials, enabling real-time verification by employers and institutions.",
+      "Certiva is a decentralized, blockchain-based degree verification system that allows universities to issue tamper-proof credentials, enabling real-time verification by employers and institutions.",
   },
   {
-    question: "How does UniChain prevent fake degrees?",
+    question: "How does Certiva prevent fake degrees?",
     answer:
       "Universities register on-chain through ENS/DNS verification and issue blockchain-backed degrees, ensuring authenticity and eliminating credential fraud.",
   },
   {
     question: "How can employers verify a degree?",
     answer:
-      "Employers can instantly verify degrees through UniChain's platform or API integration, reducing hiring risks and manual verification delays.",
+      "Employers can instantly verify degrees through Certiva's platform or API integration, reducing hiring risks and manual verification delays.",
   },
   {
     question: "Is student data kept private?",
     answer:
-      "Yes. UniChain uses Zero-Knowledge Proofs and hashed student identifiers to protect privacy while ensuring secure verification.",
+      "Yes. Certiva uses Zero-Knowledge Proofs and hashed student identifiers to protect privacy while ensuring secure verification.",
   },
   {
-    question:
-      "Can universities integrate UniChain with their existing systems?",
-    answer: "Yes, UniChain provides APIs for seamless integration.",
+    question: "Can universities integrate Certiva with their existing systems?",
+    answer: "Yes, Certiva provides APIs for seamless integration.",
   },
   {
     question: "What are the benefits for students?",

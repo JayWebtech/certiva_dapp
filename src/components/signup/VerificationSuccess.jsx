@@ -1,10 +1,10 @@
-import Image from "next/image";
+import Logo from "../layout/Logo";
 import Button from "@/components/form/Button";
 
 export default function VerificationSuccess() {
   return (
     <div className="py-16">
-      <Image width={100} height={60} src="/img/logo.svg" alt="" />
+      <Logo size="text-4xl" />
       <p className="mt-2 text-[#5B5858]">
         Register your university to start issuing verifiable, fraud-proof
         academic credentials.

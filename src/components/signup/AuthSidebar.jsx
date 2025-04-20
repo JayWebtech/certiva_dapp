@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const AuthSideBar = ({
   title = "University Details",
   currentStep = 1,
-  totalSteps = 3,
+  totalSteps = 4,
   showIndicators = true,
   children,
   className = "",

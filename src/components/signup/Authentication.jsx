@@ -7,7 +7,7 @@ import Button from "@/components/form/Button";
 import Logo from "../layout/Logo";
 import { motion } from "framer-motion";
 
-const Authentication = () => {
+const Authentication = ({ changeStep }) => {
   const txtRecord = "cb4b2af445a8a5e0d5b8f6f5d2c";
 
   const handleDownload = () => {
@@ -15,14 +15,12 @@ const Authentication = () => {
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "unichain_txt_record.txt";
+    a.download = "Certiva_txt_record.txt";
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
     window.URL.revokeObjectURL(url);
   };
-
-  const handleVerify = () => {};
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 rounded-3xl overflow-hidden w-full justify-center">
@@ -38,7 +36,7 @@ const Authentication = () => {
           transition={{ delay: 0.2, duration: 0.5 }}
           className="mb-8"
         >
-          <Logo />
+          <Logo size="text-4xl" />
           <p className="text-dim">
             Register your university to start issuing verifiable, fraud-proof
             academic credentials.
@@ -84,15 +82,15 @@ const Authentication = () => {
             type="submit"
             className="mt-8"
             title="Verify"
-            onClick={handleVerify}
+            handleClick={changeStep}
           />
         </div>
       </motion.div>
       <AuthSideBar
         title="Authentication & Security"
         currentStep={3}
-        totalSteps={4}
         showIndicators={true}
+        totalSteps={4}
       />
     </div>
   );

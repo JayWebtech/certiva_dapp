@@ -23,7 +23,7 @@ const CARDS = [
     "Protect your academic reputation",
   ]),
   new BenficiaryCard("For Developers", [
-    "Build on UniChain's API",
+    "Build on Certiva's API",
     "Secure integrations for EdTech & HR platforms",
     "Open-source development opportunities",
   ]),

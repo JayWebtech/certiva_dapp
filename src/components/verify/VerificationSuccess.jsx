@@ -12,7 +12,7 @@ export default function VerificationSuccess() {
           Verification details for <span className="text-primary">{code}</span>
         </p>
         <p className="text-[#3D3D3D] text-xs lg:text-2xl">
-          This certificate has been successfully verified on UniChain.com,
+          This certificate has been successfully verified on Certiva.com,
           confirming its authenticity and legitimacy. It is securely recorded on
           the blockchain, ensuring it is tamper-proof and verifiable in real
           time.

@@ -24,7 +24,7 @@ export default function UniversityDetails({ changeStep }) {
           transition={{ delay: 0.2, duration: 0.5 }}
           className="mb-8"
         >
-          <Logo />
+          <Logo size="text-4xl" />
           <p className="text-dim">
             Register your university to start issuing verifiable, fraud-proof
             academic credentials.
@@ -117,8 +117,8 @@ export default function UniversityDetails({ changeStep }) {
         <AuthSideBar
           title="University Details"
           currentStep={1}
-          totalSteps={4}
           showIndicators={true}
+          totalSteps={4}
         />
       </motion.div>
     </div>

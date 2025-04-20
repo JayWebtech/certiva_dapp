@@ -47,7 +47,7 @@ const Hero = () => {
               className="my-5 max-w-2xl mx-auto text-center text-sm lg:text-xl"
             >
               {" "}
-              Unichain ensures instant, secure academic credential verification
+              Certiva ensures instant, secure academic credential verification
               using Starknet and Zero-Knowledge Proofs.{" "}
             </motion.p>
             <motion.div

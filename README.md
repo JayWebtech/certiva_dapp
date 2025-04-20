@@ -1,12 +1,12 @@
-# UniChain: Decentralized Academic Credential Verification 🎓🔗
+# Certiva: Decentralized Academic Credential Verification 🎓🔗
 
-UniChain is a **decentralized, blockchain-based platform** built on **Starknet** that revolutionizes the way academic credentials are issued, stored, and verified. By leveraging **Zero-Knowledge Proofs (ZKPs)** and **tamper-proof blockchain technology**, UniChain eliminates academic fraud, ensures privacy, and provides instant verification for employers and institutions.
+Certiva is a **decentralized, blockchain-based platform** built on **Starknet** that revolutionizes the way academic credentials are issued, stored, and verified. By leveraging **Zero-Knowledge Proofs (ZKPs)** and **tamper-proof blockchain technology**, Certiva eliminates academic fraud, ensures privacy, and provides instant verification for employers and institutions.
 
 ---
 
-## 🌟 Why UniChain?
+## 🌟 Why Certiva?
 
-Academic credential fraud is a growing problem, and traditional verification methods are slow, costly, and prone to errors. UniChain solves this by:
+Academic credential fraud is a growing problem, and traditional verification methods are slow, costly, and prone to errors. Certiva solves this by:
 
 - **Eliminating fraud** with blockchain-backed, tamper-proof degrees.
 - **Protecting privacy** using hashed identifiers and ZKPs.
@@ -19,7 +19,7 @@ Academic credential fraud is a growing problem, and traditional verification met
 
 ### 1. Degree Issuance by Universities
 
-- Universities issue degrees through UniChain’s platform.
+- Universities issue degrees through Certiva’s platform.
 - Each degree is **digitally signed** and stored on the blockchain.
 - Universities prove domain ownership using **DNS verification** to ensure authenticity.
 
@@ -65,7 +65,7 @@ Academic credential fraud is a growing problem, and traditional verification met
 
 ### 5. Seamless Integration
 
-- UniChain provides **APIs** for easy integration with HR platforms, job portals, and university systems.
+- Certiva provides **APIs** for easy integration with HR platforms, job portals, and university systems.
 
 ---
 
