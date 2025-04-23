@@ -10,6 +10,7 @@
     "fmt": "prettier --write ."
   },
   "dependencies": {
+    "@metamask/browser-passworder": "^6.0.0",
     "@tailwindcss/oxide": "^4.0.15",
     "@tailwindcss/postcss": "^4.0.15",
     "formik": "^2.4.6",
