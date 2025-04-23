@@ -29,10 +29,9 @@ const Dashboard = () => {
   return (
     <div className="flex bg-black text-white min-h-screen">
       <Sidebar />
-      <main className="flex-1 py-8 mt-6 md:mt-0">
-        <div className="mb-8 py-8 pl-8 text-[#FFFFFF66] border-b flex flex-row items-center">
-          <img src="/Sidebar.png" className="w-6 h-7" alt="" />
-          <h1 className="text-xl  text-[#FFFFFF66] ml-4">Dashboard</h1>
+      <main className="flex-1 md:mt-0">
+        <div className="mb-8 py-5 pl-5 text-[#FFFFFF66] border-b flex flex-row items-center">
+          <h1 className="text-xl text-[#FFFFFF66] ml-4">Dashboard</h1>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 px-8">
