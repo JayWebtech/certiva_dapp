@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { useFormikContext } from "formik";
 import { LuLoaderCircle } from "react-icons/lu";
@@ -34,4 +35,4 @@ const Submit: React.FC<SubmitProps> = ({ title, loading = false, Icon }) => {
   );
 };
 
-export default Submit; 
+export default Submit;

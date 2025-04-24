@@ -1,3 +1,4 @@
+"use client";
 import React, { useRef, useState } from "react";
 import { useFormikContext } from "formik";
 
@@ -77,4 +78,4 @@ const CustomSelect: React.FC<CustomSelectProps> = ({
   );
 };
 
-export default CustomSelect; 
+export default CustomSelect;
