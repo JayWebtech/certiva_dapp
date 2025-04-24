@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
@@ -36,4 +37,4 @@ const Logo: React.FC<LogoProps> = ({ size = "text-2xl" }) => {
   );
 };
 
-export default Logo; 
+export default Logo;
