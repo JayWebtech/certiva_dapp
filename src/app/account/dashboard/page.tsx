@@ -1,5 +1,4 @@
 import React from "react";
-import Sidebar from "@/components/dashboard/Sidebar";
 import DashboardCard from "@/components/dashboard/DashboardCard";
 
 const Dashboard = () => {
