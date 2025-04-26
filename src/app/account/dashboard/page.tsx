@@ -27,13 +27,7 @@ const Dashboard = () => {
   ];
 
   return (
-    <div className="flex bg-black text-white min-h-screen">
-      <Sidebar />
-      <main className="flex-1 md:mt-0">
-        <div className="mb-8 py-5 pl-5 text-[#FFFFFF66] border-b flex flex-row items-center">
-          <h1 className="text-xl text-[#FFFFFF66] ml-4">Dashboard</h1>
-        </div>
-
+    <div className="bg-black text-white min-h-screen mx-auto mt-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 px-8">
           {dashboardStats.map((stat) => (
             <DashboardCard
@@ -43,7 +37,6 @@ const Dashboard = () => {
             />
           ))}
         </div>
-      </main>
     </div>
   );
 };
