@@ -9,10 +9,10 @@ const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { name: "Dashboard", href: "/dashboard" },
+    { name: "Dashboard", href: "/account/dashboard" },
     { name: "Issue Certificate", href: "/issue-certificate" },
     { name: "View Certificates", href: "/view-certificates" },
-    { name: "Verification Logs", href: "/verification-logs" },
+    { name: "Verification Logs", href: "/account/dashboard/verification-logs" },
     { name: "API & Integration", href: "/api-integration" },
     { name: "Settings", href: "/settings" },
   ];
