@@ -2,6 +2,8 @@ import React from 'react';
 import { ColumnDef } from '@tanstack/react-table';
 import { ArrowUpDown, Edit2, ChevronDown, ChevronUp } from 'lucide-react';
 import { Checkbox } from '@/components/ui/Checkbox';
+import CustomModal from '@/components/modal/CustomModal';
+import { Button } from '@/components/form';
 
 export type GraduateCertificate = {
   id: string;
@@ -127,11 +129,56 @@ export const columns: ColumnDef<GraduateCertificate>[] = [
   {
     id: 'actions',
     header: () => null,
-    cell: ({ row }) => (
-      <button className='text-zinc-400 hover:text-zinc-200 bg-transparent border-none p-0'>
-        <Edit2 size={16} />
-      </button>
-    ),
+    cell: ({ row, table }) => {
+      const { openRevokeCertificate, setOpenRevokeCertificate } = table.options
+        .meta as {
+        openRevokeCertificate: Record<string, boolean>;
+        setOpenRevokeCertificate: (
+          openRevokeCertificate: Record<string, boolean>
+        ) => void;
+      };
+      return (
+        <>
+          <button
+            onClick={() =>
+              setOpenRevokeCertificate({
+                ...openRevokeCertificate,
+                [row.id]: true,
+              })
+            }
+            className='cursor-pointer text-zinc-400 hover:text-zinc-200 bg-transparent border-none p-0'
+          >
+            <Edit2 size={16} />
+          </button>
+
+          {openRevokeCertificate[row.id] && (
+            <CustomModal
+              Content={() => (
+                <div className='py-5 px-4'>
+                  <div>
+                    <h5 className='text-2xl font-semibold'>
+                      Are you sure you want to revoke
+                      <br />
+                      <span className='text-primary'>Certificate?</span>
+                    </h5>
+                  </div>
+                  <div className='mt-10 flex space-x-4'>
+                    <Button
+                      title='Cancel'
+                      variant='secondary'
+                      className='bg-white !text-black'
+                    />
+                    <Button title='Revoke certificate' variant='primary' />
+                  </div>
+                </div>
+              )}
+              closeModal={() => setOpenRevokeCertificate({})}
+              hideFooter
+            />
+          )}
+        </>
+      );
+    },
     enableSorting: false,
     enableHiding: false,
   },

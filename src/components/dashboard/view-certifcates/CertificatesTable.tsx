@@ -52,6 +52,11 @@ export default function CertificatesTable() {
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
   );
+
+  const [openRevokeCertificate, setOpenRevokeCertificate] = React.useState<{
+    [key: string]: boolean;
+  }>({});
+
   const [columnVisibility, setColumnVisibility] =
     React.useState<VisibilityState>({});
   const [rowSelection, setRowSelection] = React.useState<RowSelectionState>({});
@@ -89,6 +94,8 @@ export default function CertificatesTable() {
     },
     meta: {
       expandedRows,
+      openRevokeCertificate,
+      setOpenRevokeCertificate,
       toggleRow,
     },
   });
