@@ -1,7 +1,7 @@
 import React from 'react';
 import { ColumnDef } from '@tanstack/react-table';
 import { ArrowUpDown, Edit2, ChevronDown, ChevronUp } from 'lucide-react';
-import { Checkbox } from '@/components/ui/Checkbox';
+import { Checkbox } from '@/components/form/Checkbox';
 import CustomModal from '@/components/modal/CustomModal';
 import { Button } from '@/components/form';
 
