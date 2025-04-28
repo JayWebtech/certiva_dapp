@@ -133,7 +133,7 @@ const Navbar: React.FC = () => {
                 <motion.a
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  href="/"
+                  href="/verify-a-degree"
                   className="bg-white text-black px-[24px] py-[8px] rounded-[8px] text-sm text-center"
                 >
                   Verify A Degree
