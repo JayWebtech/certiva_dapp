@@ -83,12 +83,17 @@ export const checkCSVData = (body: string[][]): Promise<void> => {
 };
 
 
-export const addUniqueIDToRows = (body: string[][], school: string): string[][] => {
+export const addUniqueIDToRows = (body: string[][]): string[][] => {
     return body.map(row => {
         const uniqueID = uuidv4();
-        return [...row, uniqueID, school];
+        return [...row, uniqueID];
     });
 };
+
+export const addUniqueIDToHeader = (header: string[]): string[] => {
+    return [...header, "uniqueID"];
+};
+  
 
 export const convertToCSV = (body: string[][], headers: string[]): string => {
     const allRows = [headers, ...body];

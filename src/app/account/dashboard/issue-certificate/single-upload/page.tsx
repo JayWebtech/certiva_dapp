@@ -5,6 +5,7 @@ import { Formik } from "formik";
 import { single_certificate_upload, SingleCertificateUpload } from "@/schema";
 import { generate32ByteSecret } from "@/utils/csv";
 import  { v4 as uuidv4 } from "uuid";
+import toast from "react-hot-toast";
 
 const school = "Xanix university";
 
@@ -14,17 +15,17 @@ const Page = () => {
         try {
             setLoading(true);
             const { name, graduation_year, grade, title, major, uniqueID } = values;
-            const { hash, encryptedData, result } = await generate32ByteSecret({ name, graduation_year,grade, title, major, uniqueID, school })
+            const { hash, encryptedData } = await generate32ByteSecret({ name, graduation_year,grade, title, major, uniqueID, school })
 
             const cert_metadata = {
                 certificate_id: uniqueID,
                 hashedkey: hash,
-                encrypted_cert_metadata: encryptedData
+                encrypted_cert_metadata: btoa(encryptedData)
             };
 
             console.log("cert meta data", cert_metadata);
         } catch (error) {
-            
+            toast.error("An unexpeceted error occurred")
         } finally {
             setLoading(false);
         }

@@ -10,6 +10,7 @@ import {
     addUniqueIDToRows, 
     convertToCSV, 
     generate32ByteSecret,
+    addUniqueIDToHeader,
 } from "@/utils/csv";
 import { LuLoaderCircle } from "react-icons/lu";
 
@@ -47,10 +48,11 @@ const Page = () => {
                 const { headers, body } = await extractCSVData(values.csv);
                 await checkCSVData(body);
                 
-                const updatedBody = addUniqueIDToRows(body, school);
+                const updatedBody = addUniqueIDToRows(body);
+                const updatedHeaders = addUniqueIDToHeader(headers);
                 setCSVBody(updatedBody);
 
-                const updatedCSV = convertToCSV(updatedBody, headers);
+                const updatedCSV = convertToCSV(updatedBody, updatedHeaders);
                 const blob = new Blob([updatedCSV], { type: 'text/csv' });
                 const link = URL.createObjectURL(blob);
 
@@ -125,9 +127,7 @@ const Page = () => {
                                     />
 
                                     <div className="input border border-stroke rounded-[12px] flex items-center gap-2 justify-between py-[12px] px-[16px]">
-                                         <p className={`${ values.csv ? "text-white" : "text-stroke"}`}> 
-                                            { values.csv ? values?.csv?.name : "Upload CSV File"} 
-                                        </p>
+                                        <p> { values?.csv?.name || "Upload a file"} </p>
                                         <input
                                             type="file" 
                                             ref={fileInputRef}
