@@ -36,3 +36,8 @@ input::placeholder {
     url("../../public/img/grid2.svg") no-repeat bottom center;
   background-size: contain, contain;
 }
+
+
+div:hover svg {
+  color: inherit !important;
+}

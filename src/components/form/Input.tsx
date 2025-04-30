@@ -51,16 +51,13 @@ const Input: React.FC<InputProps> = ({
 
         {buttonText && (
           <button
-            className="bg-primary py-[8px] px-[12px] rounded-[4px] min-w-[fit-content] text-sm cursor-pointer"
+            className="bg-primary text-black py-[8px] px-[12px] rounded-[4px] min-w-[fit-content] text-sm cursor-pointer"
             onClick={handleButtonClick}
           >
             <span> {buttonText} </span>
           </button>
         )}
       </div>
-      {touched && error && (
-        <div className="text-red-500 text-sm mt-1">{error}</div>
-      )}
     </div>
   );
 };
