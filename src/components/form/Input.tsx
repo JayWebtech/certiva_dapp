@@ -58,9 +58,6 @@ const Input: React.FC<InputProps> = ({
           </button>
         )}
       </div>
-      {touched && error && (
-        <div className="text-red-500 text-sm mt-1">{error}</div>
-      )}
     </div>
   );
 };
