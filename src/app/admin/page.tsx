@@ -6,19 +6,38 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import LadyCertified from "../../../public/img/lady-with-certificate.png";
 import { useState, Dispatch, SetStateAction } from "react";
+import { adminLogin } from "@/utils/api"; // Import the new API utility
 
 const Login: React.FC<{ setOtp: Dispatch<SetStateAction<boolean | null>> }> = ({
   setOtp,
 }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleLogin = () => {
+  const handleLogin = async () => {
+    setError(null);
     if (!email || !password) {
-      alert("Please fill in both email and password.");
+      setError("Please fill in both email and password.");
       return;
     }
-    setOtp(true);
+    setLoading(true);
+    try {
+      const res = await adminLogin(email, password);
+      if (res.token) {
+        localStorage.setItem("admin_token", res.token);
+        setOtp(true); // Proceed to OTP or next step
+      } else {
+        setError(res.message || "Invalid credentials");
+        console.error("Admin login error:", res);
+      }
+    } catch (err: any) {
+      setError(err.message || "Network error");
+      console.error("Network error during admin login:", err);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -39,6 +58,7 @@ const Login: React.FC<{ setOtp: Dispatch<SetStateAction<boolean | null>> }> = ({
           placeholder="eg. admin@harvad.edu"
           type="email"
           handleChange={(e) => setEmail(e.target.value)}
+          disabled={loading}
         />
       </div>
 
@@ -51,9 +71,15 @@ const Login: React.FC<{ setOtp: Dispatch<SetStateAction<boolean | null>> }> = ({
           placeholder="*********"
           type="password"
           handleChange={(e) => setPassword(e.target.value)}
+          disabled={loading}
         />
       </div>
-      <Button title="Login" handleClick={handleLogin} />
+      {error && <div className="text-red-500 text-sm mt-2">{error}</div>}
+      <Button
+        title={loading ? "Logging in..." : "Login"}
+        handleClick={handleLogin}
+        disabled={loading}
+      />
     </>
   );
 };
